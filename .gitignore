@@ -42,6 +42,18 @@ Thumbs.db
 data/raw/
 my_database/
 
+# 忽略原始数据文件
+data/*.csv
+data/*.parquet
+data/*.feather
+data/*.h5
+data/*.zip
+data/*.tar.gz
+
+# 保留示例数据和数据拉取脚本
+!data/sample/
+!data/fetch_*.py
+
 # Secrets
 .env
 *.pem
@@ -57,3 +69,7 @@ logs/
 # Temporary
 tmp/
 temp/
+
+# Backups
+backups/*.zip
+!backups/.gitkeep

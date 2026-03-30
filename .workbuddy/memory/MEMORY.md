@@ -84,11 +84,16 @@ quant-strategy-river/
 - [x] 初始化本地 Git 仓库
 - [x] 创建项目结构
 - [x] 保存自动化流程到 MEMORY.md
-- [ ] 创建 GitHub 远程仓库 `quant-strategy-river` (需手动创建或安装 GitHub CLI)
-- [ ] 推送代码到 GitHub
+- [x] 安装 GitHub CLI (v2.89.0)
+- [x] GitHub 认证登录 (账号: TJF19770107)
+- [x] 关联远程仓库 `quant-strategy-river`
+- [x] 推送代码到 GitHub main 分支
 - [ ] 配置云端同步服务 (腾讯云 COS / 阿里云 OSS)
 - [ ] 导入历史策略文件
 
 ## 更新记录
 
+- **2026-03-31 00:18**: ✅ 更新项目名称为「大道量化策略系统」并推送到 GitHub
+- **2026-03-31 00:13**: ✅ GitHub 推送成功 - 仓库地址: https://github.com/TJF19770107/quant-strategy-river
+- **2026-03-31 00:08**: ✅ GitHub 认证成功 (浏览器方式) - 账号: TJF19770107
 - **2026-03-30**: 初始化项目结构,配置 Git 仓库,建立自动化流程模板
