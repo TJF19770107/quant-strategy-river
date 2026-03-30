@@ -1,10 +1,10 @@
-# RIVER 量化策略系统
+# 大道量化策略系统
 
 > 大道至简,顺势而为
 
 ## 项目简介
 
-RIVER 是一个基于 BTC 1小时K线的量化交易策略系统,遵循大道心法:
+大道量化策略系统是一个基于 BTC 1小时K线的量化交易策略系统,遵循大道心法:
 
 ```
 无动无静,无生无灭,无去无来,无是非,无住无往。
@@ -24,7 +24,7 @@ RIVER 是一个基于 BTC 1小时K线的量化交易策略系统,遵循大道心
 ```
 quant-strategy-river/
 ├── strategies/           # 策略核心代码
-│   └── main.py          # RIVER 主策略
+│   └── main.py          # 大道主策略
 ├── data/                # 数据文件
 │   └── trading_log_river_profit.csv
 ├── reports/             # 分析报告
