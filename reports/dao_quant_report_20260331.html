@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大道量化系统 · 七币种全流程分析报告 · 2026-03-31</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --card2: #1c2333;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --green: #3fb950;
+    --red: #f85149;
+    --yellow: #d29922;
+    --blue: #58a6ff;
+    --purple: #bc8cff;
+    --orange: #f0883e;
+    --teal: #39d353;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', 'PingFang SC', sans-serif; font-size: 14px; }
+
+  .header {
+    background: linear-gradient(135deg, #0d1117 0%, #1c2333 50%, #0d1117 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 32px 40px 24px;
+    text-align: center;
+  }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--blue); letter-spacing: 2px; }
+  .header p { color: var(--muted); margin-top: 8px; font-size: 13px; }
+  .header .motto {
+    margin-top: 16px;
+    padding: 12px 24px;
+    background: rgba(88,166,255,0.08);
+    border: 1px solid rgba(88,166,255,0.2);
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 12px;
+    color: var(--blue);
+    letter-spacing: 1px;
+  }
+
+  .container { max-width: 1400px; margin: 0 auto; padding: 24px 24px 48px; }
+
+  /* ===== 总览卡片 ===== */
+  .overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    text-align: center;
+  }
+  .stat-card .val { font-size: 28px; font-weight: 700; }
+  .stat-card .lbl { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .c-blue { color: var(--blue); }
+  .c-green { color: var(--green); }
+  .c-red { color: var(--red); }
+  .c-yellow { color: var(--yellow); }
+
+  /* ===== 总览表格 ===== */
+  .section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--blue);
+    padding: 0 0 12px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title::before { content: ''; display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead tr { background: var(--card2); }
+  th { padding: 10px 12px; text-align: left; color: var(--muted); font-weight: 600; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td { padding: 10px 12px; border-bottom: 1px solid rgba(48,54,61,0.5); white-space: nowrap; }
+  tr:hover td { background: rgba(88,166,255,0.04); }
+
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .tag-green { background: rgba(63,185,80,0.15); color: var(--green); border: 1px solid rgba(63,185,80,0.3); }
+  .tag-red { background: rgba(248,81,73,0.15); color: var(--red); border: 1px solid rgba(248,81,73,0.3); }
+  .tag-yellow { background: rgba(210,153,34,0.15); color: var(--yellow); border: 1px solid rgba(210,153,34,0.3); }
+  .tag-blue { background: rgba(88,166,255,0.15); color: var(--blue); border: 1px solid rgba(88,166,255,0.3); }
+  .tag-purple { background: rgba(188,140,255,0.15); color: var(--purple); border: 1px solid rgba(188,140,255,0.3); }
+
+  /* ===== 单币详情卡片 ===== */
+  .symbol-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 24px; }
+  .symbol-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .symbol-card.entry-yes { border-color: rgba(63,185,80,0.4); }
+  .symbol-card.entry-no { border-color: rgba(48,54,61,0.8); }
+
+  .symbol-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background: var(--card2);
+    border-bottom: 1px solid var(--border);
+  }
+  .symbol-name { font-size: 18px; font-weight: 700; }
+  .symbol-price { font-size: 20px; font-weight: 700; color: var(--blue); }
+  .symbol-source { font-size: 11px; color: var(--muted); padding: 2px 6px; background: rgba(48,54,61,0.5); border-radius: 4px; }
+
+  .symbol-body { padding: 14px 18px; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .mini-section { margin-bottom: 12px; }
+  .mini-title { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+  .kv { display: flex; justify-content: space-between; padding: 3px 0; font-size: 12px; }
+  .kv .k { color: var(--muted); }
+  .kv .v { font-weight: 500; }
+
+  /* 评分条 */
+  .score-bar-wrap { margin: 12px 0; }
+  .score-label { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 4px; }
+  .score-bar { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+  .score-fill { height: 100%; border-radius: 3px; transition: width 0.5s; }
+
+  /* 开仓建议框 */
+  .entry-box {
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 12px;
+  }
+  .entry-box.yes { background: rgba(63,185,80,0.08); border: 1px solid rgba(63,185,80,0.3); }
+  .entry-box.no  { background: rgba(48,54,61,0.4);   border: 1px solid var(--border); }
+  .entry-box .entry-title { font-weight: 700; font-size: 14px; margin-bottom: 8px; }
+  .entry-box.yes .entry-title { color: var(--green); }
+  .entry-box.no  .entry-title { color: var(--muted); }
+
+  /* 因子标签 */
+  .factor-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .ftag {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    background: rgba(88,166,255,0.1);
+    color: var(--blue);
+    border: 1px solid rgba(88,166,255,0.2);
+  }
+  .ftag.pos { background: rgba(63,185,80,0.1); color: var(--green); border-color: rgba(63,185,80,0.2); }
+  .ftag.neg { background: rgba(248,81,73,0.1); color: var(--red);   border-color: rgba(248,81,73,0.2); }
+
+  /* 移动端 */
+  @media(max-width: 900px) {
+    .symbol-grid { grid-template-columns: 1fr; }
+    .overview { grid-template-columns: repeat(2,1fr); }
+    .row2 { grid-template-columns: 1fr; }
+  }
+
+  /* 底部 */
+  .footer {
+    text-align: center;
+    padding: 32px;
+    color: var(--muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+  .divider { height: 1px; background: var(--border); margin: 28px 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>大 道 量 化 系 统</h1>
+  <p>七币种全流程分析报告 · 2026-03-31 · 日线级别 · 永续合约</p>
+  <div class="motto">不预测，只识别；不预判，只跟随。应无所住而生其心。</div>
+</div>
+
+<div class="container">
+
+  <!-- 总览统计 -->
+  <div class="overview">
+    <div class="stat-card"><div class="val c-blue">7</div><div class="lbl">分析币种</div></div>
+    <div class="stat-card"><div class="val c-green">1</div><div class="lbl">可开仓</div></div>
+    <div class="stat-card"><div class="val c-yellow">2</div><div class="lbl">观察候补</div></div>
+    <div class="stat-card"><div class="val c-red">4</div><div class="lbl">暂时回避</div></div>
+  </div>
+
+  <!-- 汇总总表 -->
+  <div class="section-title">全品种快速总览</div>
+  <table>
+    <thead>
+      <tr>
+        <th>品种</th>
+        <th>当前价</th>
+        <th>7日涨跌</th>
+        <th>30日涨跌</th>
+        <th>均线趋势</th>
+        <th>MACD</th>
+        <th>RSI</th>
+        <th>缠论趋势</th>
+        <th>弹性</th>
+        <th>综合得分</th>
+        <th>开仓建议</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>XRPUSDT</strong></td>
+        <td>1.3381</td>
+        <td class="c-red">-5.35%</td>
+        <td class="c-red">-3.69%</td>
+        <td><span class="tag tag-red">空头</span></td>
+        <td><span class="tag tag-red">死叉</span></td>
+        <td><span class="tag tag-yellow">超卖21.9</span></td>
+        <td><span class="tag tag-yellow">震荡整理</span></td>
+        <td><span class="tag tag-purple">超高弹性</span></td>
+        <td>0/8</td>
+        <td><span class="tag tag-red">暂不开仓</span></td>
+      </tr>
+      <tr>
+        <td><strong>ETHUSDT</strong></td>
+        <td>2077.06</td>
+        <td class="c-red">-4.19%</td>
+        <td class="c-green">+2.49%</td>
+        <td><span class="tag tag-red">空头</span></td>
+        <td><span class="tag tag-red">死叉</span></td>
+        <td><span class="tag tag-yellow">偏空32.3</span></td>
+        <td><span class="tag tag-yellow">震荡整理</span></td>
+        <td><span class="tag tag-blue">高弹性</span></td>
+        <td>0/8</td>
+        <td><span class="tag tag-red">暂不开仓</span></td>
+      </tr>
+      <tr>
+        <td><strong>SIRENUSDT</strong></td>
+        <td>1.6746</td>
+        <td class="c-red">-18.27%</td>
+        <td class="c-green">+297.4%</td>
+        <td><span class="tag tag-yellow">震荡</span></td>
+        <td><span class="tag tag-green">金叉</span></td>
+        <td><span class="tag tag-blue">偏多57.3</span></td>
+        <td><span class="tag tag-yellow">震荡整理</span></td>
+        <td><span class="tag tag-purple">超高弹性</span></td>
+        <td>3/8</td>
+        <td><span class="tag tag-yellow">观察候补</span></td>
+      </tr>
+      <tr>
+        <td><strong>TURBOUSDT</strong></td>
+        <td>0.001025</td>
+        <td class="c-red">-5.51%</td>
+        <td class="c-green">+4.79%</td>
+        <td><span class="tag tag-red">空头</span></td>
+        <td><span class="tag tag-red">死叉</span></td>
+        <td><span class="tag tag-yellow">中性47.8</span></td>
+        <td><span class="tag tag-green">上涨趋势</span></td>
+        <td><span class="tag tag-purple">超高弹性</span></td>
+        <td>3/8</td>
+        <td><span class="tag tag-yellow">观察候补</span></td>
+      </tr>
+      <tr>
+        <td><strong>BNBUSDT</strong></td>
+        <td>617.36</td>
+        <td class="c-red">-4.71%</td>
+        <td class="c-red">-3.21%</td>
+        <td><span class="tag tag-red">空头</span></td>
+        <td><span class="tag tag-red">死叉</span></td>
+        <td><span class="tag tag-yellow">超卖29.7</span></td>
+        <td><span class="tag tag-yellow">震荡整理</span></td>
+        <td><span class="tag tag-purple">超高弹性</span></td>
+        <td>0/8</td>
+        <td><span class="tag tag-red">暂不开仓</span></td>
+      </tr>
+      <tr style="background: rgba(63,185,80,0.05);">
+        <td><strong style="color:var(--green)">BEATUSDT</strong></td>
+        <td>0.5447</td>
+        <td class="c-red">-11.90%</td>
+        <td class="c-green">+102.0%</td>
+        <td><span class="tag tag-yellow">震荡</span></td>
+        <td><span class="tag tag-red">死叉</span></td>
+        <td><span class="tag tag-blue">中性52.9</span></td>
+        <td><span class="tag tag-green">上涨趋势</span></td>
+        <td><span class="tag tag-purple">超高弹性</span></td>
+        <td><strong style="color:var(--green)">4/8</strong></td>
+        <td><span class="tag tag-green">谨慎介入</span></td>
+      </tr>
+      <tr>
+        <td><strong>RIVERUSDT</strong></td>
+        <td>17.068</td>
+        <td class="c-red">-18.11%</td>
+        <td class="c-green">+14.05%</td>
+        <td><span class="tag tag-red">空头</span></td>
+        <td><span class="tag tag-red">死叉</span></td>
+        <td><span class="tag tag-yellow">偏空42.3</span></td>
+        <td><span class="tag tag-red">下跌趋势</span></td>
+        <td><span class="tag tag-purple">超高弹性</span></td>
+        <td>0/8</td>
+        <td><span class="tag tag-red">暂不开仓</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="divider"></div>
+
+  <!-- 各币种详情 -->
+  <div class="section-title">逐币种详细因子报告</div>
+
+  <div class="symbol-grid">
+
+    <!-- ===== BEATUSDT ===== -->
+    <div class="symbol-card entry-yes">
+      <div class="symbol-header">
+        <div>
+          <div class="symbol-name" style="color:var(--green)">BEATUSDT <span style="font-size:12px;color:var(--green)">[可开仓]</span></div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px">上线: 2025-11-12 · 140根日线 · fapi</div>
+        </div>
+        <div class="symbol-price">0.5447</div>
+      </div>
+      <div class="symbol-body">
+        <div class="score-bar-wrap">
+          <div class="score-label"><span>综合得分</span><span style="color:var(--green)">4 / 8</span></div>
+          <div class="score-bar"><div class="score-fill" style="width:50%;background:var(--green)"></div></div>
+        </div>
+        <div class="row2">
+          <div>
+            <div class="mini-section">
+              <div class="mini-title">技术指标</div>
+              <div class="kv"><span class="k">MA5/10/20</span><span class="v">0.521 / 0.579 / 0.544</span></div>
+              <div class="kv"><span class="k">均线趋势</span><span class="v c-yellow">震荡无方向</span></div>
+              <div class="kv"><span class="k">MACD(DIF/DEA)</span><span class="v c-red">0.0464 / 0.0632 死叉</span></div>
+              <div class="kv"><span class="k">RSI(14)</span><span class="v c-blue">52.85 中性</span></div>
+              <div class="kv"><span class="k">ATR(14)</span><span class="v">0.1192</span></div>
+              <div class="kv"><span class="k">成交量状态</span><span class="v c-red">明显缩量 (×0.08)</span></div>
+            </div>
+          </div>
+          <div>
+            <div class="mini-section">
+              <div class="mini-title">缠论 &amp; 结构</div>
+              <div class="kv"><span class="k">缠论趋势</span><span class="v c-green">上涨趋势</span></div>
+              <div class="kv"><span class="k">近期笔高点</span><span class="v">0.437→0.788</span></div>
+              <div class="kv"><span class="k">近期笔低点</span><span class="v c-green">0.197→0.190→0.386→0.444</span></div>
+              <div class="kv"><span class="k">近端支撑</span><span class="v">0.1975</span></div>
+              <div class="kv"><span class="k">近端阻力</span><span class="v">0.7876</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="mini-section">
+          <div class="mini-title">龙头因子</div>
+          <div class="row2">
+            <div>
+              <div class="kv"><span class="k">历史最高/最低</span><span class="v">4.5000 / 0.1291</span></div>
+              <div class="kv"><span class="k">历史最大涨幅</span><span class="v c-purple">+3386%</span></div>
+              <div class="kv"><span class="k">距历史高点</span><span class="v c-red">-87.9%</span></div>
+            </div>
+            <div>
+              <div class="kv"><span class="k">日波动率</span><span class="v c-yellow">16.5%</span></div>
+              <div class="kv"><span class="k">弹性分类</span><span class="v c-purple">超高弹性(妖股)</span></div>
+              <div class="kv"><span class="k">30日涨幅</span><span class="v c-green">+102.0%</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="entry-box yes">
+          <div class="entry-title">✓ 基本满足开仓条件（谨慎介入）</div>
+          <div class="kv"><span class="k">建议入场</span><span class="v c-blue">0.5447</span></div>
+          <div class="kv"><span class="k">止损位</span><span class="v c-red">0.1936（近支撑-2%）</span></div>
+          <div class="kv"><span class="k">TP1 (1:1)</span><span class="v">0.8958</span></div>
+          <div class="kv"><span class="k">TP2 (1:2)</span><span class="v">1.2470</span></div>
+          <div class="kv"><span class="k">TP3 (1:4)</span><span class="v c-green">1.9493</span></div>
+          <div class="kv"><span class="k">盈亏比</span><span class="v c-green">1 : 4.0</span></div>
+        </div>
+        <div class="factor-tags">
+          <span class="ftag pos">缠论上涨趋势(+2)</span>
+          <span class="ftag pos">MACD动能上升(+1)</span>
+          <span class="ftag pos">RSI中性(+1)</span>
+          <span class="ftag">注意:MACD死叉</span>
+          <span class="ftag">注意:均线无方向</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TURBOUSDT ===== -->
+    <div class="symbol-card entry-no">
+      <div class="symbol-header">
+        <div>
+          <div class="symbol-name">TURBOUSDT <span class="tag tag-yellow" style="font-size:11px">观察候补</span></div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px">上线: 2024-05-30 · 671根日线 · fapi</div>
+        </div>
+        <div class="symbol-price">0.001025</div>
+      </div>
+      <div class="symbol-body">
+        <div class="score-bar-wrap">
+          <div class="score-label"><span>综合得分</span><span style="color:var(--yellow)">3 / 8</span></div>
+          <div class="score-bar"><div class="score-fill" style="width:37.5%;background:var(--yellow)"></div></div>
+        </div>
+        <div class="row2">
+          <div>
+            <div class="mini-section">
+              <div class="mini-title">技术指标</div>
+              <div class="kv"><span class="k">MA5/10/20</span><span class="v">0.00101 / 0.00105 / 0.00106</span></div>
+              <div class="kv"><span class="k">均线趋势</span><span class="v c-red">空头排列</span></div>
+              <div class="kv"><span class="k">MACD状态</span><span class="v c-red">DIF&lt;DEA 死叉</span></div>
+              <div class="kv"><span class="k">MACD动能</span><span class="v c-green">动能上升中</span></div>
+              <div class="kv"><span class="k">RSI(14)</span><span class="v c-blue">47.77 中性</span></div>
+              <div class="kv"><span class="k">成交量</span><span class="v c-red">明显缩量</span></div>
+            </div>
+          </div>
+          <div>
+            <div class="mini-section">
+              <div class="mini-title">缠论 &amp; 结构</div>
+              <div class="kv"><span class="k">缠论趋势</span><span class="v c-green">上涨趋势</span></div>
+              <div class="kv"><span class="k">近端支撑</span><span class="v">0.000965</span></div>
+              <div class="kv"><span class="k">近端阻力</span><span class="v">0.001044</span></div>
+              <div class="kv"><span class="k">60日支撑</span><span class="v">0.0008726</span></div>
+              <div class="kv"><span class="k">60日阻力</span><span class="v">0.0013713</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="mini-section">
+          <div class="mini-title">龙头因子</div>
+          <div class="row2">
+            <div>
+              <div class="kv"><span class="k">历史最高/最低</span><span class="v">0.01449 / 0.000873</span></div>
+              <div class="kv"><span class="k">历史最大涨幅</span><span class="v c-purple">+1560%</span></div>
+            </div>
+            <div>
+              <div class="kv"><span class="k">距历史高点</span><span class="v c-red">-92.9%</span></div>
+              <div class="kv"><span class="k">弹性</span><span class="v c-purple">超高弹性(妖股)</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="entry-box no">
+          <div class="entry-title">等待条件改善（暂不开仓）</div>
+          <div class="kv"><span class="k">当前评分</span><span class="v">3/8 未达门槛</span></div>
+          <div class="kv"><span class="k">触发条件</span><span class="v">等待MACD金叉 + 均线多头确认</span></div>
+          <div class="kv"><span class="k">观察时机</span><span class="v">MACD动能持续上升后</span></div>
+        </div>
+        <div class="factor-tags">
+          <span class="ftag pos">缠论上涨趋势(+2)</span>
+          <span class="ftag pos">MACD动能上升(+1)</span>
+          <span class="ftag pos">RSI中性(+1)</span>
+          <span class="ftag neg">均线空头(-1)</span>
+          <span class="ftag neg">MACD死叉(-)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SIRENUSDT ===== -->
+    <div class="symbol-card entry-no">
+      <div class="symbol-header">
+        <div>
+          <div class="symbol-name">SIRENUSDT <span class="tag tag-yellow" style="font-size:11px">观察候补</span></div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px">上线: 2025-03-22 · 375根日线 · fapi</div>
+        </div>
+        <div class="symbol-price">1.6746</div>
+      </div>
+      <div class="symbol-body">
+        <div class="score-bar-wrap">
+          <div class="score-label"><span>综合得分</span><span style="color:var(--yellow)">3 / 8</span></div>
+          <div class="score-bar"><div class="score-fill" style="width:37.5%;background:var(--yellow)"></div></div>
+        </div>
+        <div class="row2">
+          <div>
+            <div class="mini-section">
+              <div class="mini-title">技术指标</div>
+              <div class="kv"><span class="k">MA5/10/20</span><span class="v">1.524 / 1.701 / 1.202</span></div>
+              <div class="kv"><span class="k">均线趋势</span><span class="v c-yellow">震荡无方向</span></div>
+              <div class="kv"><span class="k">MACD状态</span><span class="v c-green">DIF&gt;DEA 金叉</span></div>
+              <div class="kv"><span class="k">MACD动能</span><span class="v c-red">动能下降</span></div>
+              <div class="kv"><span class="k">RSI(14)</span><span class="v c-green">57.27 偏多</span></div>
+              <div class="kv"><span class="k">成交量</span><span class="v c-red">明显缩量</span></div>
+            </div>
+          </div>
+          <div>
+            <div class="mini-section">
+              <div class="mini-title">缠论 &amp; 结构</div>
+              <div class="kv"><span class="k">缠论趋势</span><span class="v c-yellow">震荡整理</span></div>
+              <div class="kv"><span class="k">近端支撑</span><span class="v">0.4130</span></div>
+              <div class="kv"><span class="k">历史最高</span><span class="v c-red">4.8107（近高点）</span></div>
+              <div class="kv"><span class="k">30日涨幅</span><span class="v c-green">+297.4%（暴涨后回调）</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="mini-section">
+          <div class="mini-title">龙头因子</div>
+          <div class="row2">
+            <div>
+              <div class="kv"><span class="k">历史最大涨幅</span><span class="v c-purple">+14661%（极端妖股）</span></div>
+              <div class="kv"><span class="k">日波动率</span><span class="v c-red">18.1%（极高）</span></div>
+            </div>
+            <div>
+              <div class="kv"><span class="k">距历史高点</span><span class="v c-red">-65.2%</span></div>
+              <div class="kv"><span class="k">风险类型</span><span class="v c-red">暴涨后大幅回调</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="entry-box no">
+          <div class="entry-title">等待结构企稳（暂不开仓）</div>
+          <div class="kv"><span class="k">风险提示</span><span class="v c-red">已从高点下跌65%，波动极大</span></div>
+          <div class="kv"><span class="k">触发条件</span><span class="v">缠论形成底部结构 + 缩量横盘后放量突破</span></div>
+        </div>
+        <div class="factor-tags">
+          <span class="ftag pos">MACD金叉(+2)</span>
+          <span class="ftag pos">RSI偏多(+1)</span>
+          <span class="ftag neg">缠论震荡</span>
+          <span class="ftag neg">高位暴涨后回调风险</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== XRPUSDT ===== -->
+    <div class="symbol-card entry-no">
+      <div class="symbol-header">
+        <div>
+          <div class="symbol-name">XRPUSDT</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px">数据: 2023-07-06 ~ 2026-03-31 · 1000根日线 · fapi</div>
+        </div>
+        <div class="symbol-price">1.3381</div>
+      </div>
+      <div class="symbol-body">
+        <div class="score-bar-wrap">
+          <div class="score-label"><span>综合得分</span><span style="color:var(--red)">0 / 8</span></div>
+          <div class="score-bar"><div class="score-fill" style="width:0%;background:var(--red)"></div></div>
+        </div>
+        <div class="row2">
+          <div>
+            <div class="mini-section">
+              <div class="mini-title">技术指标</div>
+              <div class="kv"><span class="k">MA5/10/20/60</span><span class="v">1.329/1.365/1.405/1.416</span></div>
+              <div class="kv"><span class="k">均线趋势</span><span class="v c-red">完全空头排列</span></div>
+              <div class="kv"><span class="k">MACD状态</span><span class="v c-red">DIF&lt;DEA 死叉</span></div>
+              <div class="kv"><span class="k">RSI(14)</span><span class="v c-yellow">21.87 超卖</span></div>
+              <div class="kv"><span class="k">成交量</span><span class="v c-red">严重缩量(×0.11)</span></div>
+            </div>
+          </div>
+          <div>
+            <div class="mini-section">
+              <div class="mini-title">缠论 &amp; 结构</div>
+              <div class="kv"><span class="k">缠论趋势</span><span class="v c-yellow">震荡整理</span></div>
+              <div class="kv"><span class="k">近端支撑</span><span class="v">1.3207</span></div>
+              <div class="kv"><span class="k">近端阻力</span><span class="v">1.4721</span></div>
+              <div class="kv"><span class="k">距历史高点</span><span class="v c-red">-63.5% (ATH: 3.6646)</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="mini-section">
+          <div class="mini-title">龙头因子</div>
+          <div class="kv"><span class="k">历史最大涨幅</span><span class="v c-purple">+861%</span></div>
+          <div class="kv"><span class="k">弹性</span><span class="v c-purple">超高弹性</span></div>
+          <div class="kv"><span class="k">个性特征</span><span class="v">主流币，超卖后有反弹预期，但需等待趋势确认</span></div>
+        </div>
+        <div class="entry-box no">
+          <div class="entry-title">暂不开仓 (0/8)</div>
+          <div class="kv"><span class="k">原因</span><span class="v">均线空头+MACD死叉+缠论无趋势</span></div>
+          <div class="kv"><span class="k">关注时机</span><span class="v">RSI超卖后能否出现缠论底背驰</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ETHUSDT ===== -->
+    <div class="symbol-card entry-no">
+      <div class="symbol-header">
+        <div>
+          <div class="symbol-name">ETHUSDT</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px">数据: 2023-07-06 ~ 2026-03-31 · 1000根日线 · fapi</div>
+        </div>
+        <div class="symbol-price">2077.06</div>
+      </div>
+      <div class="symbol-body">
+        <div class="score-bar-wrap">
+          <div class="score-label"><span>综合得分</span><span style="color:var(--red)">0 / 8</span></div>
+          <div class="score-bar"><div class="score-fill" style="width:0%;background:var(--red)"></div></div>
+        </div>
+        <div class="row2">
+          <div>
+            <div class="mini-section">
+              <div class="mini-title">技术指标</div>
+              <div class="kv"><span class="k">MA5/10/20/60</span><span class="v">2014/2066/2116/2059</span></div>
+              <div class="kv"><span class="k">均线趋势</span><span class="v c-red">空头排列</span></div>
+              <div class="kv"><span class="k">MACD状态</span><span class="v c-red">DIF&lt;DEA 死叉</span></div>
+              <div class="kv"><span class="k">RSI(14)</span><span class="v c-yellow">32.34 偏空</span></div>
+              <div class="kv"><span class="k">ATR(14)</span><span class="v">106.36 ($)</span></div>
+            </div>
+          </div>
+          <div>
+            <div class="mini-section">
+              <div class="mini-title">缠论 &amp; 结构</div>
+              <div class="kv"><span class="k">缠论趋势</span><span class="v c-yellow">震荡整理</span></div>
+              <div class="kv"><span class="k">近端支撑</span><span class="v">2067.16</span></div>
+              <div class="kv"><span class="k">近端阻力</span><span class="v">2104.24</span></div>
+              <div class="kv"><span class="k">距历史高点</span><span class="v c-red">-58.1% (ATH: 4957.67)</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="mini-section">
+          <div class="mini-title">龙头因子</div>
+          <div class="kv"><span class="k">历史最大涨幅</span><span class="v c-blue">+258%（主流币）</span></div>
+          <div class="kv"><span class="k">个性特征</span><span class="v">30日+2.49%，短期企稳迹象，但方向未明</span></div>
+        </div>
+        <div class="entry-box no">
+          <div class="entry-title">暂不开仓 (0/8)</div>
+          <div class="kv"><span class="k">关注时机</span><span class="v">等待MA5上穿MA10 + MACD金叉确认</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== BNBUSDT ===== -->
+    <div class="symbol-card entry-no">
+      <div class="symbol-header">
+        <div>
+          <div class="symbol-name">BNBUSDT</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px">数据: 2023-07-06 ~ 2026-03-31 · 1000根日线 · fapi</div>
+        </div>
+        <div class="symbol-price">617.36</div>
+      </div>
+      <div class="symbol-body">
+        <div class="score-bar-wrap">
+          <div class="score-label"><span>综合得分</span><span style="color:var(--red)">0 / 8</span></div>
+          <div class="score-bar"><div class="score-fill" style="width:0%;background:var(--red)"></div></div>
+        </div>
+        <div class="row2">
+          <div>
+            <div class="mini-section">
+              <div class="mini-title">技术指标</div>
+              <div class="kv"><span class="k">MA5/10/20/60</span><span class="v">611/624/639/640</span></div>
+              <div class="kv"><span class="k">均线趋势</span><span class="v c-red">空头排列</span></div>
+              <div class="kv"><span class="k">MACD状态</span><span class="v c-red">DIF&lt;DEA 死叉</span></div>
+              <div class="kv"><span class="k">RSI(14)</span><span class="v c-yellow">29.71 超卖</span></div>
+              <div class="kv"><span class="k">ATR(14)</span><span class="v">19.37 ($)</span></div>
+            </div>
+          </div>
+          <div>
+            <div class="mini-section">
+              <div class="mini-title">缠论 &amp; 结构</div>
+              <div class="kv"><span class="k">缠论趋势</span><span class="v c-yellow">震荡整理</span></div>
+              <div class="kv"><span class="k">近端支撑</span><span class="v">607.56</span></div>
+              <div class="kv"><span class="k">近端阻力</span><span class="v">619.06</span></div>
+              <div class="kv"><span class="k">距历史高点</span><span class="v c-red">-55.1% (ATH: 1374.61)</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="mini-section">
+          <div class="mini-title">龙头因子</div>
+          <div class="kv"><span class="k">历史最大涨幅</span><span class="v c-purple">+582%</span></div>
+          <div class="kv"><span class="k">个性特征</span><span class="v">交易所平台币，RSI超卖，但趋势未转</span></div>
+        </div>
+        <div class="entry-box no">
+          <div class="entry-title">暂不开仓 (0/8)</div>
+          <div class="kv"><span class="k">关注时机</span><span class="v">等待RSI超卖后的缠论底部结构</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== RIVERUSDT ===== -->
+    <div class="symbol-card entry-no">
+      <div class="symbol-header">
+        <div>
+          <div class="symbol-name">RIVERUSDT</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px">上线: 2025-10-17 · 166根日线 · fapi</div>
+        </div>
+        <div class="symbol-price">17.068</div>
+      </div>
+      <div class="symbol-body">
+        <div class="score-bar-wrap">
+          <div class="score-label"><span>综合得分</span><span style="color:var(--red)">0 / 8</span></div>
+          <div class="score-bar"><div class="score-fill" style="width:0%;background:var(--red)"></div></div>
+        </div>
+        <div class="row2">
+          <div>
+            <div class="mini-section">
+              <div class="mini-title">技术指标</div>
+              <div class="kv"><span class="k">MA5/10/20</span><span class="v">14.78 / 18.60 / 20.58</span></div>
+              <div class="kv"><span class="k">均线趋势</span><span class="v c-red">空头排列</span></div>
+              <div class="kv"><span class="k">MACD状态</span><span class="v c-red">DIF&lt;DEA 死叉 (-0.507)</span></div>
+              <div class="kv"><span class="k">RSI(14)</span><span class="v c-yellow">42.25 偏空</span></div>
+              <div class="kv"><span class="k">ATR(14)</span><span class="v">5.658（波动大）</span></div>
+            </div>
+          </div>
+          <div>
+            <div class="mini-section">
+              <div class="mini-title">缠论 &amp; 结构</div>
+              <div class="kv"><span class="k">缠论趋势</span><span class="v c-red">下跌趋势</span></div>
+              <div class="kv"><span class="k">近端支撑</span><span class="v">16.120</span></div>
+              <div class="kv"><span class="k">近端阻力</span><span class="v">21.773</span></div>
+              <div class="kv"><span class="k">距历史高点</span><span class="v c-red">-80.2% (ATH: 86.0)</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="mini-section">
+          <div class="mini-title">龙头因子</div>
+          <div class="kv"><span class="k">历史最大涨幅</span><span class="v c-purple">+5222%（超级妖股）</span></div>
+          <div class="kv"><span class="k">日波动率</span><span class="v c-red">18.9%（极高风险）</span></div>
+          <div class="kv"><span class="k">个性特征</span><span class="v">极端妖股，暴涨+5222%后下跌80%，当前仍处于下跌趋势</span></div>
+        </div>
+        <div class="entry-box no">
+          <div class="entry-title">坚决回避（下跌趋势）</div>
+          <div class="kv"><span class="k">风险评级</span><span class="v c-red">极高（妖股下跌通道中）</span></div>
+          <div class="kv"><span class="k">策略</span><span class="v">等待缠论出现明确底部结构后再评估</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end symbol-grid -->
+
+  <div class="divider"></div>
+
+  <!-- 共性规律提炼 -->
+  <div class="section-title">七币种共性规律提炼</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px;">
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;">
+      <div style="font-size:14px;font-weight:600;color:var(--yellow);margin-bottom:12px">市场共性信号（2026-03-31）</div>
+      <div class="kv"><span class="k">整体大势</span><span class="v c-red">6/7品种近7日下跌，市场偏弱</span></div>
+      <div class="kv"><span class="k">MACD状态</span><span class="v c-red">5/7处于死叉，整体空头动能</span></div>
+      <div class="kv"><span class="k">RSI超卖</span><span class="v c-yellow">XRP、BNB超卖，有技术反弹预期</span></div>
+      <div class="kv"><span class="k">缠论特征</span><span class="v">2个上涨(BEAT/TURBO)，1个下跌(RIVER)</span></div>
+      <div class="kv"><span class="k">成交量</span><span class="v c-red">普遍缩量，市场活跃度低</span></div>
+      <div class="kv"><span class="k">波动率</span><span class="v c-yellow">SIREN/RIVER日波动>18%，极端风险</span></div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;">
+      <div style="font-size:14px;font-weight:600;color:var(--blue);margin-bottom:12px">个性因子档案</div>
+      <div class="kv"><span class="k">SIREN</span><span class="v c-purple">30日+297%，极端暴涨妖股，历史涨幅+14661%</span></div>
+      <div class="kv"><span class="k">RIVER</span><span class="v c-purple">历史涨幅+5222%，已从高点跌-80%</span></div>
+      <div class="kv"><span class="k">BEAT</span><span class="v c-green">30日+102%，缠论上涨趋势，唯一可开仓</span></div>
+      <div class="kv"><span class="k">TURBO</span><span class="v c-yellow">缠论上涨趋势，MACD动能回升，候补观察</span></div>
+      <div class="kv"><span class="k">XRP/ETH/BNB</span><span class="v">主流币，当前均处调整，等待趋势确认</span></div>
+    </div>
+  </div>
+
+  <!-- 心法总结 -->
+  <div style="background:linear-gradient(135deg,rgba(88,166,255,0.05),rgba(63,185,80,0.05));border:1px solid rgba(88,166,255,0.2);border-radius:10px;padding:24px;margin-top:16px;">
+    <div style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:16px;text-align:center">大道量化系统 · 核心心法</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center;">
+      <div>
+        <div style="font-size:13px;color:var(--muted);margin-bottom:6px">认知之道</div>
+        <div style="font-size:12px;line-height:1.8;color:var(--text)">不预测，只识别<br>不预判，只跟随<br>以K线为相，以量价为证</div>
+      </div>
+      <div>
+        <div style="font-size:13px;color:var(--muted);margin-bottom:6px">交易之道</div>
+        <div style="font-size:12px;line-height:1.8;color:var(--text)">盈亏比≥1:4<br>结构止损，不死扛<br>顺势多单，不逆势</div>
+      </div>
+      <div>
+        <div style="font-size:13px;color:var(--muted);margin-bottom:6px">心法之源</div>
+        <div style="font-size:12px;line-height:1.8;color:var(--blue)">应无所住<br>而生其心</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end container -->
+
+<div class="footer">
+  大道量化系统 V3.0 · 分析时间: 2026-03-31 10:27 · 数据来源: 币安永续合约(fapi) · 仅供研究参考，不构成投资建议
+</div>
+
+</body>
+</html>

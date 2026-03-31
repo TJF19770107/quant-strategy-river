@@ -1,0 +1,616 @@
+{
+  "fenbi": [
+    {
+      "start": {
+        "index": 10,
+        "datetime": "2026-03-10 08:00:00",
+        "price": 0.33315,
+        "type": "low"
+      },
+      "end": {
+        "index": 32,
+        "datetime": "2026-03-11 06:00:00",
+        "price": 0.42083,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 22,
+      "range": 0.08767999999999998,
+      "range_pct": 26.31847516133873
+    },
+    {
+      "start": {
+        "index": 42,
+        "datetime": "2026-03-11 16:00:00",
+        "price": 0.33006,
+        "type": "low"
+      },
+      "end": {
+        "index": 47,
+        "datetime": "2026-03-11 21:00:00",
+        "price": 0.36445,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 5,
+      "range": 0.034389999999999976,
+      "range_pct": 10.419317699812147
+    },
+    {
+      "start": {
+        "index": 47,
+        "datetime": "2026-03-11 21:00:00",
+        "price": 0.36445,
+        "type": "high"
+      },
+      "end": {
+        "index": 54,
+        "datetime": "2026-03-12 04:00:00",
+        "price": 0.34575,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 7,
+      "range": 0.018699999999999994,
+      "range_pct": 5.131019344217312
+    },
+    {
+      "start": {
+        "index": 57,
+        "datetime": "2026-03-12 07:00:00",
+        "price": 0.36799,
+        "type": "high"
+      },
+      "end": {
+        "index": 64,
+        "datetime": "2026-03-12 14:00:00",
+        "price": 0.33955,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 7,
+      "range": 0.028439999999999965,
+      "range_pct": 7.7284708823609245
+    },
+    {
+      "start": {
+        "index": 64,
+        "datetime": "2026-03-12 14:00:00",
+        "price": 0.33955,
+        "type": "low"
+      },
+      "end": {
+        "index": 75,
+        "datetime": "2026-03-13 01:00:00",
+        "price": 0.36024,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 11,
+      "range": 0.020689999999999986,
+      "range_pct": 6.093358857311143
+    },
+    {
+      "start": {
+        "index": 84,
+        "datetime": "2026-03-13 10:00:00",
+        "price": 0.36463,
+        "type": "high"
+      },
+      "end": {
+        "index": 90,
+        "datetime": "2026-03-13 16:00:00",
+        "price": 0.35114,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 6,
+      "range": 0.013490000000000002,
+      "range_pct": 3.6996407317006286
+    },
+    {
+      "start": {
+        "index": 90,
+        "datetime": "2026-03-13 16:00:00",
+        "price": 0.35114,
+        "type": "low"
+      },
+      "end": {
+        "index": 95,
+        "datetime": "2026-03-13 21:00:00",
+        "price": 0.36466,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 5,
+      "range": 0.013519999999999976,
+      "range_pct": 3.850316113231183
+    },
+    {
+      "start": {
+        "index": 114,
+        "datetime": "2026-03-14 16:00:00",
+        "price": 0.37655,
+        "type": "high"
+      },
+      "end": {
+        "index": 123,
+        "datetime": "2026-03-15 01:00:00",
+        "price": 0.34051,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 9,
+      "range": 0.036040000000000016,
+      "range_pct": 9.571106094808131
+    },
+    {
+      "start": {
+        "index": 123,
+        "datetime": "2026-03-15 01:00:00",
+        "price": 0.34051,
+        "type": "low"
+      },
+      "end": {
+        "index": 133,
+        "datetime": "2026-03-15 11:00:00",
+        "price": 0.3755,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 10,
+      "range": 0.03499000000000002,
+      "range_pct": 10.27576282634872
+    },
+    {
+      "start": {
+        "index": 133,
+        "datetime": "2026-03-15 11:00:00",
+        "price": 0.3755,
+        "type": "high"
+      },
+      "end": {
+        "index": 142,
+        "datetime": "2026-03-15 20:00:00",
+        "price": 0.35248,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 9,
+      "range": 0.023019999999999985,
+      "range_pct": 6.1304926764314205
+    },
+    {
+      "start": {
+        "index": 146,
+        "datetime": "2026-03-16 00:00:00",
+        "price": 0.3736,
+        "type": "high"
+      },
+      "end": {
+        "index": 173,
+        "datetime": "2026-03-17 03:00:00",
+        "price": 0.15666,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 27,
+      "range": 0.21694,
+      "range_pct": 58.06745182012848
+    },
+    {
+      "start": {
+        "index": 173,
+        "datetime": "2026-03-17 03:00:00",
+        "price": 0.15666,
+        "type": "low"
+      },
+      "end": {
+        "index": 182,
+        "datetime": "2026-03-17 12:00:00",
+        "price": 0.20095,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 9,
+      "range": 0.044289999999999996,
+      "range_pct": 28.27141580492787
+    },
+    {
+      "start": {
+        "index": 215,
+        "datetime": "2026-03-18 21:00:00",
+        "price": 0.0891,
+        "type": "low"
+      },
+      "end": {
+        "index": 224,
+        "datetime": "2026-03-19 06:00:00",
+        "price": 0.12487,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 9,
+      "range": 0.035769999999999996,
+      "range_pct": 40.14590347923681
+    },
+    {
+      "start": {
+        "index": 244,
+        "datetime": "2026-03-20 02:00:00",
+        "price": 0.10217,
+        "type": "high"
+      },
+      "end": {
+        "index": 251,
+        "datetime": "2026-03-20 09:00:00",
+        "price": 0.07647,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 7,
+      "range": 0.0257,
+      "range_pct": 25.1541548399726
+    },
+    {
+      "start": {
+        "index": 251,
+        "datetime": "2026-03-20 09:00:00",
+        "price": 0.07647,
+        "type": "low"
+      },
+      "end": {
+        "index": 259,
+        "datetime": "2026-03-20 17:00:00",
+        "price": 0.1095,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 8,
+      "range": 0.033030000000000004,
+      "range_pct": 43.193409180070624
+    },
+    {
+      "start": {
+        "index": 275,
+        "datetime": "2026-03-21 09:00:00",
+        "price": 0.08811,
+        "type": "low"
+      },
+      "end": {
+        "index": 280,
+        "datetime": "2026-03-21 14:00:00",
+        "price": 0.10728,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 5,
+      "range": 0.019170000000000006,
+      "range_pct": 21.756894790602665
+    },
+    {
+      "start": {
+        "index": 280,
+        "datetime": "2026-03-21 14:00:00",
+        "price": 0.10728,
+        "type": "high"
+      },
+      "end": {
+        "index": 303,
+        "datetime": "2026-03-22 13:00:00",
+        "price": 0.09014,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 23,
+      "range": 0.017140000000000002,
+      "range_pct": 15.976882923191651
+    },
+    {
+      "start": {
+        "index": 306,
+        "datetime": "2026-03-22 16:00:00",
+        "price": 0.10784,
+        "type": "high"
+      },
+      "end": {
+        "index": 311,
+        "datetime": "2026-03-22 21:00:00",
+        "price": 0.08515,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 5,
+      "range": 0.022690000000000002,
+      "range_pct": 21.040430267062316
+    },
+    {
+      "start": {
+        "index": 327,
+        "datetime": "2026-03-23 13:00:00",
+        "price": 0.09386,
+        "type": "high"
+      },
+      "end": {
+        "index": 336,
+        "datetime": "2026-03-23 22:00:00",
+        "price": 0.06752,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 9,
+      "range": 0.026340000000000002,
+      "range_pct": 28.063072661410615
+    },
+    {
+      "start": {
+        "index": 336,
+        "datetime": "2026-03-23 22:00:00",
+        "price": 0.06752,
+        "type": "low"
+      },
+      "end": {
+        "index": 346,
+        "datetime": "2026-03-24 08:00:00",
+        "price": 0.08937,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 10,
+      "range": 0.02185000000000001,
+      "range_pct": 32.36078199052134
+    },
+    {
+      "start": {
+        "index": 346,
+        "datetime": "2026-03-24 08:00:00",
+        "price": 0.08937,
+        "type": "high"
+      },
+      "end": {
+        "index": 357,
+        "datetime": "2026-03-24 19:00:00",
+        "price": 0.07834,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 11,
+      "range": 0.011029999999999998,
+      "range_pct": 12.34194919995524
+    },
+    {
+      "start": {
+        "index": 357,
+        "datetime": "2026-03-24 19:00:00",
+        "price": 0.07834,
+        "type": "low"
+      },
+      "end": {
+        "index": 366,
+        "datetime": "2026-03-25 04:00:00",
+        "price": 0.08182,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 9,
+      "range": 0.003479999999999997,
+      "range_pct": 4.442175134031142
+    },
+    {
+      "start": {
+        "index": 382,
+        "datetime": "2026-03-25 20:00:00",
+        "price": 0.0421,
+        "type": "low"
+      },
+      "end": {
+        "index": 397,
+        "datetime": "2026-03-26 11:00:00",
+        "price": 0.06168,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 15,
+      "range": 0.01958,
+      "range_pct": 46.5083135391924
+    },
+    {
+      "start": {
+        "index": 397,
+        "datetime": "2026-03-26 11:00:00",
+        "price": 0.06168,
+        "type": "high"
+      },
+      "end": {
+        "index": 405,
+        "datetime": "2026-03-26 19:00:00",
+        "price": 0.05109,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 8,
+      "range": 0.010589999999999995,
+      "range_pct": 17.169260700389096
+    },
+    {
+      "start": {
+        "index": 405,
+        "datetime": "2026-03-26 19:00:00",
+        "price": 0.05109,
+        "type": "low"
+      },
+      "end": {
+        "index": 411,
+        "datetime": "2026-03-27 01:00:00",
+        "price": 0.05686,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 6,
+      "range": 0.005769999999999997,
+      "range_pct": 11.293795263260906
+    },
+    {
+      "start": {
+        "index": 438,
+        "datetime": "2026-03-28 04:00:00",
+        "price": 0.05933,
+        "type": "high"
+      },
+      "end": {
+        "index": 445,
+        "datetime": "2026-03-28 11:00:00",
+        "price": 0.05078,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 7,
+      "range": 0.008550000000000002,
+      "range_pct": 14.410921961907974
+    },
+    {
+      "start": {
+        "index": 445,
+        "datetime": "2026-03-28 11:00:00",
+        "price": 0.05078,
+        "type": "low"
+      },
+      "end": {
+        "index": 451,
+        "datetime": "2026-03-28 17:00:00",
+        "price": 0.05816,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 6,
+      "range": 0.007380000000000005,
+      "range_pct": 14.533280819220176
+    },
+    {
+      "start": {
+        "index": 451,
+        "datetime": "2026-03-28 17:00:00",
+        "price": 0.05816,
+        "type": "high"
+      },
+      "end": {
+        "index": 456,
+        "datetime": "2026-03-28 22:00:00",
+        "price": 0.05173,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 5,
+      "range": 0.006430000000000005,
+      "range_pct": 11.0557083906465
+    },
+    {
+      "start": {
+        "index": 461,
+        "datetime": "2026-03-29 03:00:00",
+        "price": 0.04926,
+        "type": "low"
+      },
+      "end": {
+        "index": 469,
+        "datetime": "2026-03-29 11:00:00",
+        "price": 0.05574,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 8,
+      "range": 0.00648,
+      "range_pct": 13.15468940316687
+    },
+    {
+      "start": {
+        "index": 481,
+        "datetime": "2026-03-29 23:00:00",
+        "price": 0.0539,
+        "type": "high"
+      },
+      "end": {
+        "index": 489,
+        "datetime": "2026-03-30 07:00:00",
+        "price": 0.05066,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 8,
+      "range": 0.0032400000000000068,
+      "range_pct": 6.011131725417452
+    }
+  ],
+  "xianduan": [
+    {
+      "start": {
+        "index": 280,
+        "datetime": "2026-03-21 14:00:00",
+        "price": 0.10728,
+        "type": "high"
+      },
+      "end": {
+        "index": 336,
+        "datetime": "2026-03-23 22:00:00",
+        "price": 0.06752,
+        "type": "low"
+      },
+      "type": "down",
+      "fenbi_count": 3,
+      "total_range": 0.039760000000000004,
+      "total_range_pct": 37.06189410887398
+    }
+  ],
+  "zhongshu": [],
+  "beichi": [],
+  "maimian": {
+    "一买": [
+      {
+        "datetime": "2026-03-30 07:00:00",
+        "price": 0.05066,
+        "beichi_ratio": 0.5000000000000011
+      }
+    ],
+    "二买": [
+      {
+        "datetime": "2026-03-30 07:00:00",
+        "price": 0.05066,
+        "beichi_ratio": 0.5000000000000011
+      }
+    ],
+    "三买": [],
+    "一卖": [],
+    "二卖": [],
+    "三卖": []
+  },
+  "summary": {
+    "current_price": 0.05484,
+    "trend": "down",
+    "fenbi_count": 30,
+    "xianduan_count": 1,
+    "zhongshu_count": 0,
+    "nearest_support": 0.05066,
+    "nearest_resistance": 0.05816,
+    "last_beichi": null,
+    "active_signals": {
+      "一买": [
+        {
+          "datetime": "2026-03-30 07:00:00",
+          "price": 0.05066,
+          "beichi_ratio": 0.5000000000000011
+        }
+      ],
+      "二买": [
+        {
+          "datetime": "2026-03-30 07:00:00",
+          "price": 0.05066,
+          "beichi_ratio": 0.5000000000000011
+        }
+      ],
+      "三买": [],
+      "一卖": [],
+      "二卖": [],
+      "三卖": []
+    }
+  }
+}

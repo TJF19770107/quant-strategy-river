@@ -1,0 +1,171 @@
+{
+  "fenbi": [
+    {
+      "start": {
+        "index": 19,
+        "datetime": "2026-03-27 09:00:00",
+        "price": 18.345,
+        "type": "high"
+      },
+      "end": {
+        "index": 26,
+        "datetime": "2026-03-27 16:00:00",
+        "price": 12.152,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 7,
+      "range": 6.193,
+      "range_pct": 33.75851730716817
+    },
+    {
+      "start": {
+        "index": 26,
+        "datetime": "2026-03-27 16:00:00",
+        "price": 12.152,
+        "type": "low"
+      },
+      "end": {
+        "index": 42,
+        "datetime": "2026-03-28 08:00:00",
+        "price": 16.14,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 16,
+      "range": 3.9880000000000013,
+      "range_pct": 32.817643186306796
+    },
+    {
+      "start": {
+        "index": 42,
+        "datetime": "2026-03-28 08:00:00",
+        "price": 16.14,
+        "type": "high"
+      },
+      "end": {
+        "index": 58,
+        "datetime": "2026-03-29 00:00:00",
+        "price": 13.272,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 16,
+      "range": 2.8680000000000003,
+      "range_pct": 17.769516728624538
+    },
+    {
+      "start": {
+        "index": 58,
+        "datetime": "2026-03-29 00:00:00",
+        "price": 13.272,
+        "type": "low"
+      },
+      "end": {
+        "index": 63,
+        "datetime": "2026-03-29 05:00:00",
+        "price": 14.688,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 5,
+      "range": 1.4160000000000004,
+      "range_pct": 10.669077757685356
+    },
+    {
+      "start": {
+        "index": 63,
+        "datetime": "2026-03-29 05:00:00",
+        "price": 14.688,
+        "type": "high"
+      },
+      "end": {
+        "index": 69,
+        "datetime": "2026-03-29 11:00:00",
+        "price": 13.22,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 6,
+      "range": 1.468,
+      "range_pct": 9.994553376906318
+    },
+    {
+      "start": {
+        "index": 69,
+        "datetime": "2026-03-29 11:00:00",
+        "price": 13.22,
+        "type": "low"
+      },
+      "end": {
+        "index": 75,
+        "datetime": "2026-03-29 17:00:00",
+        "price": 15.229,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 6,
+      "range": 2.0089999999999986,
+      "range_pct": 15.196671709531001
+    },
+    {
+      "start": {
+        "index": 75,
+        "datetime": "2026-03-29 17:00:00",
+        "price": 15.229,
+        "type": "high"
+      },
+      "end": {
+        "index": 80,
+        "datetime": "2026-03-29 22:00:00",
+        "price": 13.6,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 5,
+      "range": 1.6289999999999996,
+      "range_pct": 10.696697091076233
+    }
+  ],
+  "xianduan": [],
+  "zhongshu": [],
+  "beichi": [],
+  "maimian": {
+    "一买": [],
+    "二买": [],
+    "三买": [],
+    "一卖": [
+      {
+        "datetime": "2026-03-29 05:00:00",
+        "price": 14.688,
+        "beichi_ratio": 0.493723849372385
+      }
+    ],
+    "二卖": [],
+    "三卖": []
+  },
+  "summary": {
+    "current_price": 15.972,
+    "trend": "down",
+    "fenbi_count": 7,
+    "xianduan_count": 0,
+    "zhongshu_count": 0,
+    "nearest_support": 13.22,
+    "nearest_resistance": 15.229,
+    "last_beichi": null,
+    "active_signals": {
+      "一买": [],
+      "二买": [],
+      "三买": [],
+      "一卖": [
+        {
+          "datetime": "2026-03-29 05:00:00",
+          "price": 14.688,
+          "beichi_ratio": 0.493723849372385
+        }
+      ],
+      "二卖": [],
+      "三卖": []
+    }
+  }
+}

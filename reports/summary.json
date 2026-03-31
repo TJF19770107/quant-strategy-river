@@ -1,0 +1,29 @@
+[
+  {
+    "symbol": "AIAUSDT",
+    "current_price": 0.11742,
+    "trend": "下跌趋势",
+    "support": 0.11538,
+    "resistance": 0.1209,
+    "can_open": false,
+    "rr_ratio": 4.0
+  },
+  {
+    "symbol": "MYXUSDT",
+    "current_price": 0.2313,
+    "trend": "下跌趋势",
+    "support": 0.2287,
+    "resistance": 0.2417,
+    "can_open": false,
+    "rr_ratio": 4.0
+  },
+  {
+    "symbol": "COAIUSDT",
+    "current_price": 0.2723,
+    "trend": "震荡整理",
+    "support": 0.2654,
+    "resistance": 0.2765,
+    "can_open": false,
+    "rr_ratio": 4.0
+  }
+]

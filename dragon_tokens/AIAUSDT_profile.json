@@ -1,0 +1,87 @@
+{
+  "symbol": "AIAUSDT",
+  "type": "perpetual",
+  "exchange": "Binance",
+  "analysis_date": "2026-03-31 02:19:06",
+  "data_info": {
+    "start_date": "2026-01-27 06:00:00",
+    "end_date": "2026-03-30 17:00:00",
+    "total_bars": 1500
+  },
+  "price_info": {
+    "current_price": 0.11742,
+    "all_time_high": 0.21699,
+    "all_time_low": 0.07156,
+    "support": 0.11538,
+    "resistance": 0.1209
+  },
+  "technical_signals": {
+    "ma_system": "空头排列",
+    "macd": "空头",
+    "rsi": 44.459459459459445,
+    "volume_ratio": 0.15528146560886075
+  },
+  "dragon_factors": {
+    "volatility_type": "高弹性",
+    "max_rise_pct": 203.2280603689212,
+    "trend_type": "下跌趋势",
+    "momentum": "看跌",
+    "signal_strength": "弱"
+  },
+  "trading_signal": {
+    "current_price": 0.11742,
+    "ma_signal": "空头排列",
+    "macd_signal": "空头",
+    "macd_bias": "看跌",
+    "rsi": 44.459459459459445,
+    "rsi_zone": "偏弱",
+    "bullish_count": 1,
+    "can_open": false,
+    "signal_reason": [],
+    "entry_range": [
+      0.11683289999999999,
+      0.11800709999999999
+    ],
+    "stop_loss": 0.11128312031177567,
+    "tp1": 0.12355687968822432,
+    "tp2": 0.12969375937644864,
+    "take_profit": 0.1419675187528973,
+    "risk_reward_ratio": 4.0
+  },
+  "chan_theory": {
+    "current_price": 0.11742,
+    "trend": "up",
+    "fenbi_count": 107,
+    "xianduan_count": 7,
+    "zhongshu_count": 0,
+    "nearest_support": 0.09125,
+    "nearest_resistance": 0.14764,
+    "last_beichi": null,
+    "active_signals": {
+      "一买": [
+        {
+          "datetime": "2026-03-30 02:00:00",
+          "price": 0.11169,
+          "beichi_ratio": 0.7436905254447662
+        }
+      ],
+      "二买": [
+        {
+          "datetime": "2026-03-30 02:00:00",
+          "price": 0.11169,
+          "beichi_ratio": 0.7436905254447662
+        }
+      ],
+      "三买": [],
+      "一卖": [
+        {
+          "datetime": "2026-03-30 10:00:00",
+          "price": 0.12683,
+          "beichi_ratio": 0.4211404728789987
+        }
+      ],
+      "二卖": [],
+      "三卖": []
+    }
+  }
+}

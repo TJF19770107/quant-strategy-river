@@ -1,0 +1,106 @@
+{
+  "name": "大道龙头币品种库",
+  "version": "1.0",
+  "description": "个人十倍/二十倍龙头币品种库 - 个性因子与战法档案",
+  "created_date": "2026-03-31",
+  "last_updated": "2026-03-31T01:48:00",
+  "symbols": [
+    {
+      "symbol": "RIVERUSDT",
+      "name": "RIVER",
+      "type": "perpetual",
+      "exchange": "Binance",
+      "leverage_tier": "10x-20x",
+      "status": "active",
+      "profile": "dragon_tokens/RIVERUSDT_profile.json",
+      "analysis": "dragon_tokens/RIVERUSDT_analysis.json",
+      "notes": "大道实战币种"
+    },
+    {
+      "symbol": "BANANAS31USDT",
+      "name": "BANANAS31",
+      "type": "perpetual",
+      "exchange": "Binance",
+      "leverage_tier": "10x-20x",
+      "status": "active",
+      "profile": "dragon_tokens/BANANAS31USDT_profile.json",
+      "analysis": "dragon_tokens/BANANAS31USDT_analysis.json",
+      "notes": "大道实战币种"
+    },
+    {
+      "symbol": "POWERUSDT",
+      "name": "POWER",
+      "type": "perpetual",
+      "exchange": "Binance",
+      "leverage_tier": "10x-20x",
+      "status": "active",
+      "profile": "dragon_tokens/POWERUSDT_profile.json",
+      "analysis": "dragon_tokens/POWERUSDT_analysis.json",
+      "notes": "大道实战币种"
+    },
+    {
+      "symbol": "PIPPINUSDT",
+      "name": "PIPPIN",
+      "type": "perpetual",
+      "exchange": "Binance",
+      "leverage_tier": "10x-20x",
+      "status": "active",
+      "profile": "dragon_tokens/PIPPINUSDT_profile.json",
+      "analysis": "dragon_tokens/PIPPINUSDT_analysis.json",
+      "notes": "大道实战币种"
+    },
+    {
+      "symbol": "BEATUSDT",
+      "name": "BEAT",
+      "type": "perpetual",
+      "exchange": "Binance",
+      "leverage_tier": "10x-20x",
+      "status": "active",
+      "profile": "dragon_tokens/BEATUSDT_profile.json",
+      "analysis": "dragon_tokens/BEATUSDT_analysis.json",
+      "notes": "大道量化新增品种"
+    },
+    {
+      "symbol": "AIAUSDT",
+      "name": "AIA",
+      "type": "perpetual",
+      "exchange": "Binance",
+      "leverage_tier": "10x-20x",
+      "status": "active",
+      "profile": "dragon_tokens/AIAUSDT_profile.json",
+      "analysis": "dragon_tokens/AIAUSDT_analysis.json",
+      "notes": "大道量化新增品种"
+    },
+    {
+      "symbol": "MYXUSDT",
+      "name": "MYX",
+      "type": "perpetual",
+      "exchange": "Binance",
+      "leverage_tier": "10x-20x",
+      "status": "active",
+      "profile": "dragon_tokens/MYXUSDT_profile.json",
+      "analysis": "dragon_tokens/MYXUSDT_analysis.json",
+      "notes": "大道量化新增品种"
+    },
+    {
+      "symbol": "COAIUSDT",
+      "name": "COAI",
+      "type": "perpetual",
+      "exchange": "Binance",
+      "leverage_tier": "10x-20x",
+      "status": "active",
+      "profile": "dragon_tokens/COAIUSDT_profile.json",
+      "analysis": "dragon_tokens/COAIUSDT_analysis.json",
+      "notes": "大道量化新增品种"
+    }
+  ],
+  "settings": {
+    "default_interval": "1h",
+    "min_risk_reward": 4.0,
+    "data_source": "Binance API",
+    "proxy": {
+      "http": "http://127.0.0.1:7897",
+      "https": "http://127.0.0.1:7897"
+    }
+  }
+}

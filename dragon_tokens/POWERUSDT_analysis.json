@@ -1,0 +1,231 @@
+{
+  "fenbi": [
+    {
+      "start": {
+        "index": 14,
+        "datetime": "2025-12-06 23:00:00",
+        "price": 0.2058,
+        "type": "low"
+      },
+      "end": {
+        "index": 21,
+        "datetime": "2025-12-07 06:00:00",
+        "price": 0.246,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 7,
+      "range": 0.040199999999999986,
+      "range_pct": 19.533527696792994
+    },
+    {
+      "start": {
+        "index": 21,
+        "datetime": "2025-12-07 06:00:00",
+        "price": 0.246,
+        "type": "high"
+      },
+      "end": {
+        "index": 27,
+        "datetime": "2025-12-07 12:00:00",
+        "price": 0.18569,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 6,
+      "range": 0.06031,
+      "range_pct": 24.51626016260163
+    },
+    {
+      "start": {
+        "index": 27,
+        "datetime": "2025-12-07 12:00:00",
+        "price": 0.18569,
+        "type": "low"
+      },
+      "end": {
+        "index": 34,
+        "datetime": "2025-12-07 19:00:00",
+        "price": 0.21233,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 7,
+      "range": 0.026639999999999997,
+      "range_pct": 14.346491464268404
+    },
+    {
+      "start": {
+        "index": 62,
+        "datetime": "2025-12-08 23:00:00",
+        "price": 0.3292,
+        "type": "high"
+      },
+      "end": {
+        "index": 94,
+        "datetime": "2025-12-10 07:00:00",
+        "price": 0.194,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 32,
+      "range": 0.1352,
+      "range_pct": 41.069258809234505
+    },
+    {
+      "start": {
+        "index": 94,
+        "datetime": "2025-12-10 07:00:00",
+        "price": 0.194,
+        "type": "low"
+      },
+      "end": {
+        "index": 103,
+        "datetime": "2025-12-10 16:00:00",
+        "price": 0.22546,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 9,
+      "range": 0.03145999999999999,
+      "range_pct": 16.216494845360817
+    },
+    {
+      "start": {
+        "index": 112,
+        "datetime": "2025-12-11 01:00:00",
+        "price": 0.1875,
+        "type": "low"
+      },
+      "end": {
+        "index": 117,
+        "datetime": "2025-12-11 06:00:00",
+        "price": 0.25058,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 5,
+      "range": 0.06308000000000002,
+      "range_pct": 33.642666666666685
+    },
+    {
+      "start": {
+        "index": 129,
+        "datetime": "2025-12-11 18:00:00",
+        "price": 0.20579,
+        "type": "low"
+      },
+      "end": {
+        "index": 134,
+        "datetime": "2025-12-11 23:00:00",
+        "price": 0.22497,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 5,
+      "range": 0.019180000000000003,
+      "range_pct": 9.320180766801109
+    },
+    {
+      "start": {
+        "index": 134,
+        "datetime": "2025-12-11 23:00:00",
+        "price": 0.22497,
+        "type": "high"
+      },
+      "end": {
+        "index": 139,
+        "datetime": "2025-12-12 04:00:00",
+        "price": 0.199,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 5,
+      "range": 0.025969999999999993,
+      "range_pct": 11.543761390407607
+    },
+    {
+      "start": {
+        "index": 139,
+        "datetime": "2025-12-12 04:00:00",
+        "price": 0.199,
+        "type": "low"
+      },
+      "end": {
+        "index": 147,
+        "datetime": "2025-12-12 12:00:00",
+        "price": 0.231,
+        "type": "high"
+      },
+      "type": "up",
+      "bars": 8,
+      "range": 0.032,
+      "range_pct": 16.08040201005025
+    },
+    {
+      "start": {
+        "index": 162,
+        "datetime": "2025-12-13 03:00:00",
+        "price": 0.25221,
+        "type": "high"
+      },
+      "end": {
+        "index": 173,
+        "datetime": "2025-12-13 14:00:00",
+        "price": 0.2051,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 11,
+      "range": 0.047109999999999985,
+      "range_pct": 18.678878712184286
+    },
+    {
+      "start": {
+        "index": 177,
+        "datetime": "2025-12-13 18:00:00",
+        "price": 0.265,
+        "type": "high"
+      },
+      "end": {
+        "index": 184,
+        "datetime": "2025-12-14 01:00:00",
+        "price": 0.21192,
+        "type": "low"
+      },
+      "type": "down",
+      "bars": 7,
+      "range": 0.053080000000000016,
+      "range_pct": 20.03018867924529
+    }
+  ],
+  "xianduan": [],
+  "zhongshu": [],
+  "beichi": [],
+  "maimian": {
+    "一买": [],
+    "二买": [],
+    "三买": [],
+    "一卖": [],
+    "二卖": [],
+    "三卖": []
+  },
+  "summary": {
+    "current_price": 0.22931,
+    "trend": "down",
+    "fenbi_count": 11,
+    "xianduan_count": 0,
+    "zhongshu_count": 0,
+    "nearest_support": 0.199,
+    "nearest_resistance": 0.231,
+    "last_beichi": null,
+    "active_signals": {
+      "一买": [],
+      "二买": [],
+      "三买": [],
+      "一卖": [],
+      "二卖": [],
+      "三卖": []
+    }
+  }
+}

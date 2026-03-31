@@ -1,0 +1,92 @@
+{
+  "symbol": "MYXUSDT",
+  "type": "perpetual",
+  "exchange": "Binance",
+  "analysis_date": "2026-03-31 02:19:06",
+  "data_info": {
+    "start_date": "2026-01-27 06:00:00",
+    "end_date": "2026-03-30 17:00:00",
+    "total_bars": 1500
+  },
+  "price_info": {
+    "current_price": 0.2313,
+    "all_time_high": 6.868,
+    "all_time_low": 0.2252,
+    "support": 0.2287,
+    "resistance": 0.2417
+  },
+  "technical_signals": {
+    "ma_system": "空头排列",
+    "macd": "空头",
+    "rsi": 21.198156682027573,
+    "volume_ratio": 0.9469173788179779
+  },
+  "dragon_factors": {
+    "volatility_type": "高弹性",
+    "max_rise_pct": 2949.733570159858,
+    "trend_type": "下跌趋势",
+    "momentum": "看跌",
+    "signal_strength": "弱"
+  },
+  "trading_signal": {
+    "current_price": 0.2313,
+    "ma_signal": "空头排列",
+    "macd_signal": "空头",
+    "macd_bias": "看跌",
+    "rsi": 21.198156682027573,
+    "rsi_zone": "超卖",
+    "bullish_count": 0,
+    "can_open": false,
+    "signal_reason": [],
+    "entry_range": [
+      0.2301435,
+      0.23245649999999998
+    ],
+    "stop_loss": 0.22263043722174908,
+    "tp1": 0.23996956277825093,
+    "tp2": 0.24863912555650186,
+    "take_profit": 0.2659782511130037,
+    "risk_reward_ratio": 4.0
+  },
+  "chan_theory": {
+    "current_price": 0.2313,
+    "trend": "up",
+    "fenbi_count": 107,
+    "xianduan_count": 2,
+    "zhongshu_count": 0,
+    "nearest_support": 0.2287,
+    "nearest_resistance": 0.249,
+    "last_beichi": null,
+    "active_signals": {
+      "一买": [
+        {
+          "datetime": "2026-03-29 15:00:00",
+          "price": 0.2362,
+          "beichi_ratio": 0.6305418719211822
+        }
+      ],
+      "二买": [
+        {
+          "datetime": "2026-03-29 15:00:00",
+          "price": 0.2362,
+          "beichi_ratio": 0.6305418719211822
+        }
+      ],
+      "三买": [],
+      "一卖": [
+        {
+          "datetime": "2026-03-29 08:00:00",
+          "price": 0.249,
+          "beichi_ratio": 0.6928327645051194
+        },
+        {
+          "datetime": "2026-03-29 22:00:00",
+          "price": 0.2457,
+          "beichi_ratio": 0.7421875000000003
+        }
+      ],
+      "二卖": [],
+      "三卖": []
+    }
+  }
+}

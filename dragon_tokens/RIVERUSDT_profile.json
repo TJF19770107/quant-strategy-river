@@ -1,0 +1,107 @@
+{
+  "symbol": "RIVERUSDT",
+  "name": "RIVER",
+  "created_date": "2026-03-31",
+  "last_updated": "2026-03-31",
+  
+  "basic_info": {
+    "exchange": "Binance",
+    "type": "U本位永续合约",
+    "leverage_recommend": "10x-20x",
+    "launch_date": null,
+    "data_range": {
+      "start": null,
+      "end": null,
+      "total_candles": 0
+    }
+  },
+  
+  "historical_extremes": {
+    "all_time_high": null,
+    "all_time_high_date": null,
+    "all_time_low": null,
+    "all_time_low_date": null,
+    "max_rise_ratio": null,
+    "max_fall_ratio": null,
+    "volatility_score": null
+  },
+  
+  "price_patterns": {
+    "common_rises": [],
+    "common_falls": [],
+    "consolidation_patterns": [],
+    "breakout_patterns": [],
+    "double_patterns": [],
+    "head_shoulder_patterns": []
+  },
+  
+  "volume_characteristics": {
+    "avg_daily_volume": null,
+    "volume_spike_threshold": 2.0,
+    "volume_dry_threshold": 0.3,
+    "volume_price_correlation": null,
+    "accumulation_indicator": null
+  },
+  
+  "support_resistance": {
+    "key_support_levels": [],
+    "key_resistance_levels": [],
+    "psychological_levels": [],
+    "fibonacci_levels": []
+  },
+  
+  "chan_theory": {
+    "笔": {
+      "records": [],
+      "特征": null
+    },
+    "线段": {
+      "records": [],
+      "特征": null
+    },
+    "中枢": {
+      "records": [],
+      "特征": null
+    },
+    "背驰": {
+      "records": [],
+      "特征": null
+    },
+    "买卖点": {
+      "一买": [],
+      "二买": [],
+      "三买": [],
+      "一卖": [],
+      "二卖": [],
+      "三卖": []
+    }
+  },
+  
+  "technical_factors": {
+    "ma_preference": "MA30/MA60",
+    "macd_behavior": null,
+    "rsi_range": null,
+    "boll_behavior": null,
+    "kdj_pattern": null
+  },
+  
+  "personal_factors": {
+    "best_entry_time": null,
+    "best_exit_time": null,
+    "avoid_trade_conditions": [],
+    "high_probability_signals": [],
+    "common_mistakes": []
+  },
+  
+  "risk_reward": {
+    "min_risk_reward": 4.0,
+    "recommended_stop_loss": null,
+    "tp1_ratio": null,
+    "tp2_ratio": null,
+    "tp3_ratio": null
+  },
+  
+  "trade_log": [],
+  
+  "notes": "大道龙头币个性因子档案"
+}

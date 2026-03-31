@@ -1,0 +1,95 @@
+{
+  "name": "大道量化策略系统 - 品种数据库",
+  "version": "1.0",
+  "description": "支持的所有交易标的及配置",
+  "symbols": [
+    {
+      "symbol": "RIVERUSDT",
+      "name": "RIVER",
+      "type": "perpetual",
+      "exchange": "Binance",
+      "api": "fapi",
+      "enabled": true,
+      "added_date": "2026-03-31",
+      "notes": "RIVER是Binance上的U本位永续合约"
+    },
+    {
+      "symbol": "BANANAS31USDT",
+      "name": "BANANAS31",
+      "type": "perpetual",
+      "exchange": "Binance",
+      "api": "fapi",
+      "enabled": true,
+      "added_date": "2026-03-31",
+      "notes": "BANANAS31是Binance上的U本位永续合约"
+    },
+    {
+      "symbol": "POWERUSDT",
+      "name": "POWER",
+      "type": "perpetual",
+      "exchange": "Binance",
+      "api": "fapi",
+      "enabled": true,
+      "added_date": "2026-03-31",
+      "notes": "用户指定添加的币安U本位永续合约"
+    },
+    {
+      "symbol": "PIPPINUSDT",
+      "name": "PIPPIN",
+      "type": "perpetual",
+      "exchange": "Binance",
+      "api": "fapi",
+      "enabled": true,
+      "added_date": "2026-03-31",
+      "notes": "用户指定添加的币安U本位永续合约"
+    },
+    {
+      "symbol": "BEATUSDT",
+      "name": "BEAT",
+      "type": "perpetual",
+      "exchange": "Binance",
+      "api": "fapi",
+      "enabled": true,
+      "added_date": "2026-03-31",
+      "notes": "大道量化新增品种"
+    },
+    {
+      "symbol": "AIAUSDT",
+      "name": "AIA",
+      "type": "perpetual",
+      "exchange": "Binance",
+      "api": "fapi",
+      "enabled": true,
+      "added_date": "2026-03-31",
+      "notes": "大道量化新增品种"
+    },
+    {
+      "symbol": "MYXUSDT",
+      "name": "MYX",
+      "type": "perpetual",
+      "exchange": "Binance",
+      "api": "fapi",
+      "enabled": true,
+      "added_date": "2026-03-31",
+      "notes": "大道量化新增品种"
+    },
+    {
+      "symbol": "COAIUSDT",
+      "name": "COAI",
+      "type": "perpetual",
+      "exchange": "Binance",
+      "api": "fapi",
+      "enabled": true,
+      "added_date": "2026-03-31",
+      "notes": "大道量化新增品种"
+    }
+  ],
+  "settings": {
+    "default_interval": "1h",
+    "data_retry": 3,
+    "proxy": {
+      "http": "http://127.0.0.1:7897",
+      "https": "http://127.0.0.1:7897"
+    }
+  }
+}
